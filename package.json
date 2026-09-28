@@ -1,0 +1,19 @@
+{
+  "name": "ai-secretary-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "개인형 AI 비서 앱 — 화면과 분리한 기능 로직과 단위 테스트",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --test \"src/**/*.test.ts\"",
+    "typecheck": "tsc -p tsconfig.json",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.0",
+    "typescript": "^7.0.2"
+  }
+}

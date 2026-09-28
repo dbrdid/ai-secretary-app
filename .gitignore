@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.env
+
+# 팀 원문 사본. doc1은 로그인해야 열리는 비공개 문서라 저장소에 올리지 않는다.
+sources/
+
+# 사용자 캡처. 비공개 팀 시트 화면이 담겨 있어 저장소에 올리지 않는다.
+attachments/

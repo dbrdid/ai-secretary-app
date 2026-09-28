@@ -1,0 +1,20 @@
+{
+  // Node(22.18+)가 .ts 파일을 타입만 지우고 바로 실행한다. 그래서 tsc는 검사만 하고(noEmit),
+  // 타입 지우기로 실행할 수 없는 문법(enum, namespace 등)은 erasableSyntaxOnly로 막는다.
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
