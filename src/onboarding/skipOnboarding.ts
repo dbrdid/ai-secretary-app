@@ -15,6 +15,8 @@
  * 건너뛰었다고 알고 있어 어긋나기 때문이다. 실패 문구와 재시도 방식은 팀이 정한다.
  */
 
+import type { DailyBriefing, WeeklyBriefing } from '../settings/briefing.ts';
+
 export const SKIP_TOAST = '설정에서 언제든 변경할 수 있어요';
 export const FALLBACK_TIME_ZONE = 'Asia/Seoul';
 
@@ -23,10 +25,10 @@ export type AiConfirmMode = 'confirmAll' | 'autoSaveHighConfidence';
 export type OnboardingSettings = {
   readonly aiAutoAnalysis: boolean;
   readonly aiConfirmMode: AiConfirmMode;
-  /** time은 'HH:mm'(DTL-SET-011: 00:00~23:30, 30분 단위) */
-  readonly dailyBriefing: { readonly enabled: boolean; readonly time: string };
+  /** time은 'HH:mm'(DTL-SET-011: 00:00~23:30, 30분 단위). 검사는 settings/briefing.ts */
+  readonly dailyBriefing: DailyBriefing;
   /** 요일·시각은 켤 때 정한다(DTL-SET-012). 건너뛰기 기본값은 꺼짐이라 두지 않는다. */
-  readonly weeklyBriefing: { readonly enabled: boolean };
+  readonly weeklyBriefing: WeeklyBriefing;
   readonly timeZone: string;
 };
 

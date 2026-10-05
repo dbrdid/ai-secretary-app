@@ -1,67 +1,45 @@
-# HANDOFF — 개인형 AI 비서 앱 (MyClaw 프로젝트: 모바일프로젝트)
-
-갱신: 2026-09-28 (1묶음 완료, 첫 커밋)
+# HANDOFF — 개인형 AI 비서 앱
+갱신: 2026-09-28 밤 / Asia/Seoul
 
 ## 목표
+사용자가 붙인 기능 요구사항 50건을 화면·백엔드 의존성에 맞게 개발한다.
+계획: docs/plans/2026-09-28-myClaw-development-order.md (단계 0~10, 50건 추적표).
+사용자 지시(2026-09-28): 지금 당장 할 수 있는 것만 진행하고, 논의가 필요한 것·혼자 정하기 어려운 것은 따로 파일로 → docs/open-decisions.md.
 
-육양님 담당(시트 분류 = '기능')을 화면과 분리한 로직과 단위 테스트로 만든다. 화면 연결과 서버 연결은 이번 범위 밖이다.
+## 한 것 (경로) — 모두 커밋하지 않음(작업 트리)
+1. 단계 0 기반: src/contracts/(time·items·evidence·trash·itemStore) + src/adapters/fake/memoryItemStore.ts
+2. 설정(DTL-SET-011·012·013): src/settings/briefing.ts, timeZoneCheck.ts. src/onboarding/skipOnboarding.ts 수정(주간 브리핑 타입 확장).
+3. 일정·할 일(DTL-CAL-003·002, TSK-002): src/calendar/recurrence.ts, dayAgenda.ts, src/tasks/completion.ts. 일정 형식에 반복·알림 칸 추가(src/contracts/items.ts).
+4. 입력(DTL-INB-002·005·007): src/inbox/mentionTrigger.ts, recorder.ts, filePick.ts와 각 *.test.ts.
+5. 인증(DTL-AUT-035·037): src/auth/session.ts — 로그인 유지 쿠키 규칙, 재진입 때 갈 화면(홈/초기 설정/로그인/다시 시도), Access 토큰 메모리 보관.
+   가짜 서버 src/adapters/fake/fakeSessionServer.ts(세션 쿠키·14일 쿠키·회전·폐기를 흉내), src/auth/session.test.ts.
+6. 논의 파일 docs/open-decisions.md (OD-01~24). 코드 주석의 OD 번호가 여기를 가리킨다.
+7. 스토리보드: 사용자가 알려 준 /Users/shiomiikuhiro/Desktop/모바일프로젝트 는 파일이 아니라 폴더이고, PNG 캡처 11장
+   ('UI/UX 스토리보드' — 로그인·회원가입·이메일 인증·비밀번호 재설정·오류 문구·메인화면)이 들어 있다.
+   이미지를 볼 도구가 없어 macOS Vision 글자 인식(osascript JXA)으로 읽었다 → sources/storyboard-2026-09-28-ocr.txt.
+   이 파일은 git status에 나타나지 않는다(sources/가 무시 목록인 것으로 추정). 원본 이미지는 복사하지 않았다.
 
-## 풀리지 않은 문제: 담당 범위 29건인가 52건인가
+## 확인한 것과 방법
+- npm run check 실제 실행(set -o pipefail): 타입 검사 통과, 테스트 218개 통과·실패 0.
+  이번 대화 첫 실행 204개(입력 테스트 34개 추가) → 세션 테스트 14개 추가 후 218개.
+- git diff --check 오류 없음. 새 src·docs 파일에 줄끝 공백 없음.
+- 코드의 OD 번호(01·03·07·09·10·13·14·15·16·17·19·20·21)가 모두 docs/open-decisions.md 제목에 있음(grep 대조).
+- 스토리보드 ↔ 상세 설계(sources/sheet2_상세설계참고.csv) 대조 결과는 OD-05~08·11·12·22·24.
+  주요 차이: 인증 코드 3분/10분, 로그인 잠금 10분/15분, 가입 뒤 로그인 화면/자동 로그인+초기 설정, 재설정 코드/링크,
+  Remember = 비밀번호 저장/토큰 14일, 하단 탭 메모/프로젝트.
+- 미검증: 스토리보드의 아이콘·배치·색(글자만 읽음, 소셜 버튼 TALK·N·G는 추정), 실제 서버·브라우저 쿠키 동작(가짜 서버 통과일 뿐), 화면 연결.
 
-- 계획서 4-1은 '상세 설계 참고' 탭 기준 29건이다(MyClaw 해석). '요구사항' 탭 기준이면 52건이다(26건 추가, 경계 3건 DTL-AUT-027·038, DTL-SET-014 제외, 계획서 4-1 표 C).
-- `attachments/2026-09-28-095229-6a25.png`(09:52)는 요구사항 탭 화면이다. 확인 방법: macOS Vision 글자 인식. 열은 '분류(Type)·기능명·상세 요구사항 및 인수 조건·비고', 행은 회원가입부터 재설정 안내 만료까지. 이 캡처를 보낸 사용자 메시지는 MyClaw가 볼 수 있는 기록에 없어서, 52건 기준을 뜻하는지는 확인하지 못했다.
-- 1묶음 9건은 모두 두 기준에 공통이다. 그래서 기준과 관계없이 진행했다.
-
-## 파일 위치 (정정)
-
-이전 메모에는 계획서·스크립트·원문 사본이 이 폴더 밖에만 있다고 적었다. 지금은 09:56에 이 폴더로 복사돼 있다: `docs/plans/2026-09-27-ai-secretary-mvp.md`, `scripts/verify_plan.py`, `sources/`. `sources/`와 `attachments/`는 비공개 팀 자료라 `.gitignore`에 넣었다.
-
-## 한 것
-
-환경: TypeScript 7(검사만), Node 22.18 이상이 .ts를 바로 실행, 테스트는 node:test. `npm run check` = 타입 검사 + 테스트.
-
-| 1묶음 항목 | 파일 | 테스트 |
-|---|---|---|
-| DTL-AUT-014 약관 전체 동의 | `src/auth/terms.ts` | 7 |
-| DTL-AUT-016 가입 버튼 활성화 | `src/auth/signupButton.ts` | 10 |
-| DTL-AUT-020 입력값 유지 | `src/auth/signupDraft.ts` | 7 |
-| DTL-AUT-026 재발송 60초 | `src/shared/cooldown.ts` | 4 |
-| DTL-AUT-049 재설정 링크 60초 | `src/shared/cooldown.ts` | 1 |
-| DTL-AUT-030 Enter 제출 | `src/auth/loginKeyboard.ts`, `src/shared/keyboard.ts` | 5 |
-| DTL-SET-003 건너뛰기 기본값 | `src/onboarding/skipOnboarding.ts` | 9 (이번에 추가) |
-| DTL-UX-003 분류 바꾸기 | `src/review/resultCard.ts` | 5 (이번에 추가) |
-| DTL-UX-004 제목·날짜 인라인 수정 | `src/review/resultCard.ts` | 9 (이번에 추가) |
-
-보조: `src/auth/signupRules.ts`(테스트 20). 분류가 '검증'이라 담당 밖이지만 016 계산에 필요해서 두었다.
-
-이번 변경:
-- `skipOnboarding.ts`: 저장이 끝난 뒤 다시 누르면 무시한다(codex 지적: 재저장, 토스트 중복). 홈 이동·토스트 함수의 예외는 `failed`로 바꾸지 않았다. 저장은 이미 성공했기 때문이다.
-- `resultCard.ts`의 [임시 가정] 3개:
-  1. 일정의 일시와 할 일의 마감일을 같은 칸(`when`)으로 본다. 메모로 바꾸면 저장에서만 빠지고, 되돌리면 복원된다.
-  2. 필드 이름은 DTL-UX-002 카드 항목에서 가져왔다.
-  3. 제목과 날짜의 입력 검사 규칙.
-
-## 팀 확인 표시 (코드 주석)
-
-- `[임시 가정]` 기존 3곳 + `resultCard.ts` 3곳 (+ `skipOnboarding.ts` 시간대 1곳은 기존 3곳에 포함)
-- `[임시 처리]` 1곳
-- `[해석]` 5곳
-- 표시 없는 팀 확인 대상도 있다: `cooldown.ts`는 실패해도 대기를 풀지 않는다. `skipOnboarding.ts`는 앞 단계에서 바꾼 값을 기본값으로 덮는다.
-
-## 확인한 것 (2026-09-28, 이번 대화에서 실행)
-
-- `npm run check`: 종료 코드 0, tests 77 / pass 77 / fail 0
-- `python3 scripts/verify_plan.py`: FAIL 0건
-- 새 주석의 원문 인용 8개를 CSV 사본에서 찾았다. 모두 있었다.
-- 미확인: 기존 코드(auth, shared) 주석의 인용은 대조하지 않았다. 원문 사본 이후 팀 문서가 바뀌었는지도 확인하지 않았다.
+## 임시 가정 (논의 파일에 올림)
+- 세션: 네트워크 오류면 로그아웃시키지 않고 retry, 만료 문구는 서버가 expired/invalid를 알릴 때만, 14일은 로그인 때부터(가짜 서버) — OD-07.
+- 스토리보드와 다른 곳은 코드가 상세 설계를 따른다(OD-12 추천). 스토리보드의 '이메일·비밀번호 자동 저장'은 구현하지 않는다(보안).
+- 이전 가정: 주간 시각 30분 단위 미강제·끄면 값 유지(OD-09), 완료를 다시 누르면 해제(OD-16), 월말 반복·관련 메모 기준은 인자(OD-13·15).
 
 ## 남은 것
-
-1. 담당 기준(29건 또는 52건)을 육양님께 확인한다. 52건이면 계획서 4-1·4-3·5장을 다시 나눈다. 추가되는 26건 가운데 지금 만들 수 있는 것을 가린다.
-2. 임시 가정과 해석 표시를 팀 확인 목록으로 정리한다.
-3. 2묶음(가짜 서버로 먼저 만드는 8건)을 시작한다. 계획서 4-3.
-4. 계획서 4-3의 "아직 코드는 없다"와 5장 체크 상태를 현재에 맞게 고친다.
+- 사용자·팀 결정: docs/open-decisions.md '먼저 정할 것' 7건(OD-01·03·05·06·08·12·22).
+- 계획서 50건 상태는 여전히 '계획됨' — 로직만 있고 화면·서버 연결 전이다.
+- 지금 할 수 있는 다음 후보(상세 설계 규칙 충분): DTL-AUT-038 Access 토큰 자동 갱신(동시 만료 때 갱신 1회), DTL-AUT-039 재로그인 뒤 보던 화면으로 복귀.
+- 커밋하지 않았다. 커밋 여부는 사용자에게 맡긴다.
 
 ## 다음 행동
-
-육양님의 기준 답을 받는다. 답이 오기 전이면 2와 4부터 한다.
+1. 사용자가 '먼저 정할 것'에 답하면 해당 코드의 [임시 가정]·테스트를 고치고 open-decisions.md에 결정을 적는다.
+2. 답을 기다리는 동안 DTL-AUT-038부터(src/auth/). update_plan의 plan에 2026-09-28-myClaw-development-order.md를 지정한다.
