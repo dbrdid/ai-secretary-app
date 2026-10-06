@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "개인형 AI 비서 앱 — 화면과 분리한 기능 로직과 단위 테스트",
+  "description": "B2B AI 업무·일정 비서 앱 — 화면과 분리한 기능 로직과 단위 테스트",
   "engines": {
     "node": ">=22.18"
   },

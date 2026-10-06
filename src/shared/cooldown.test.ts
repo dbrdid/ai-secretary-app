@@ -37,7 +37,7 @@ describe('DTL-AUT-026 [재발송] 60초 대기', () => {
   });
 });
 
-describe('DTL-AUT-049 [재설정 링크 받기] 60초 대기 (DTL-AUT-026과 같은 계산)', () => {
+describe('DTL-AUT-049 [인증번호 받기] 60초 대기 (DTL-AUT-026과 같은 계산)', () => {
   test('누른 뒤 60초 동안 받지 않고 남은 초를 보이며, 60초가 지나면 다시 받는다', () => {
     const { accepted, cooldown } = press(COOLDOWN_READY, T0);
     assert.equal(accepted, true);
