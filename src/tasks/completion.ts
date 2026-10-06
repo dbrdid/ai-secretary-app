@@ -10,8 +10,8 @@
  * - 저장이 끝나기 전에 같은 할 일을 또 누르면 무시한다. 두 요청이 같은 version으로 가서 뒤의 것이 충돌로 실패하고,
  *   화면에는 체크가 두 번 뒤집혀 보이기 때문이다.
  * - 출처(provenance)는 바꾸지 않는다. 자동 저장된 AI 할 일을 완료해도 'AI 생성' 배지는 그대로다(OD-17).
- * - [임시 가정] 완료한 할 일을 다시 누르면 완료를 푼다. 원문은 완료만 적었지만, 잘못 누른 것을 되돌릴 길이 없으면
- *   할 일을 다시 만들어야 한다(docs/open-decisions.md OD-16).
+ * - 완료한 할 일을 다시 누르면 완료를 푼다. 명세서 REQ-TSK-005(완료 취소)가 정한 동작이다
+ *   (docs/open-decisions.md OD-16).
  * - [임시 가정] 완료 시각은 누른 기기의 시계(now)로 넣는다. 서버 시각으로 바꿀지는 API 담당과 정한다(OD-16).
  */
 import { contentOf, type Item, type TaskContent, type TaskItem } from '../contracts/items.ts';
