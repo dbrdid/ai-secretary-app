@@ -1,6 +1,26 @@
 # HANDOFF — 개인형 AI 비서 앱
 갱신: 2026-10-05 / Asia/Seoul
 
+## 명세서 v5 규칙 코드 추가 (2026-10-06, 같은 브랜치)
+### 결정 (최재원, 2026-10-06)
+- 웹과 앱을 둘 다 만든다. 유료(Pro·Team)만 웹↔앱 연동. 백엔드 담당은 손주원·유병욱. 팀 역할은 Drive '역할 및 진행 사항' 시트(OD-02).
+### 한 것 (새 파일, 모두 *.test.ts 포함)
+- src/auth/verificationCode.ts: 인증번호 6자리·3분·5회 실패 무효·1회용·재발송 1시간 5회, 입력 정리·자동 제출·타이머 (DTL-AUT-021~026·047·048·052)
+- src/auth/loginThrottle.ts: 로그인 빈 칸 검사, 통일 실패 문구, 5회 실패 10분 차단 (DTL-AUT-031·033·034)
+- src/auth/tokenRefresh.ts: 401 자동 갱신(동시 만료 때 1회), 재로그인 뒤 복귀 경로 검사 (DTL-AUT-038·039)
+- src/tasks/taskStatus.ts: 할 일 탭 분류, 기한 초과, 마감 임박 7일 (DTL-TSK-001, DTL-HOM-004, REQ-TSK-006)
+- src/calendar/overlap.ts: 일정 겹침 안내, 남은 날 수 (REQ-CAL-005·014)
+- src/inbox/memoInput.ts: 메모 10,000자, 빈 메모, 3초 미만 녹음 (DTL-INB-003·006, REQ-INB-016)
+- src/review/suggestionStatus.ts: 제안 상태(확인 대기·승인·거절·보류), 일괄 처리, 확인 대기 개수 (REQ-UX-001·007~009·011)
+- src/billing/plans.ts: 요금제 한도·이용량·한도 초과, 유료만 연동 (DTL-PAY-001, REQ-PAY-002~004)
+- src/team/membership.ts: 마지막 관리자 나가기 제한, 내보내기, 나간 사람 할 일 담당 해제 (REQ-TEM-001·008~010, REQ-ACC-006)
+### 확인한 것
+- npm run check: 타입 검사 성공, 테스트 통과(PR 본문에 개수).
+### 남은 것
+- 역할별 권한 범위(REQ-TEM-006·007)는 역할 종류가 명세서에서 임시안이라 만들지 않았다(OD-25).
+- 할 일 '진행 중' 상태(REQ-TSK-006)는 저장 형식에 칸이 없어 서버 담당과 정한 뒤 더한다.
+- 앱(Flutter)에서 쓰는 방법(OD-26), 무료 사용자의 기기 간 유지 범위(OD-27).
+
 ## 명세서 v5 맞춤 (2026-10-06, 브랜치 spec-v5-alignment)
 ### 한 것
 - 코드 주석의 초기 설정 번호를 명세서 v5로 고쳤다: REQ-SET-003→009(src/auth/session.ts), 008→015(src/contracts/items.ts), 009·010→018·019(src/settings/).

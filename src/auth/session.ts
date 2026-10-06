@@ -109,8 +109,11 @@ export function screenAfterRefresh(result: RefreshResult): RestoreOutcome {
   }
 }
 
-/** DTL-AUT-037: 재진입할 때 부른다. 성공하면 Access 토큰을 보관함에 넣고, 세션이 없거나 끝났으면 비운다. */
-export async function restoreSession(api: SessionApi, tokens: AccessTokenHolder): Promise<RestoreOutcome> {
+/**
+ * 재발급을 받고 보관함을 고친다. 성공하면 Access 토큰을 넣고, 세션이 없거나 끝났으면 비운다. 네트워크 오류면 그대로 둔다.
+ * 재진입 복원(restoreSession)과 401 자동 갱신(auth/tokenRefresh.ts)이 같은 규칙을 쓰게 여기 하나만 둔다.
+ */
+export async function refreshAndStore(api: SessionApi, tokens: AccessTokenHolder): Promise<RefreshResult> {
   let result: RefreshResult;
   try {
     result = await api.refresh();
@@ -120,5 +123,10 @@ export async function restoreSession(api: SessionApi, tokens: AccessTokenHolder)
   }
   if (result.ok) tokens.set(result.accessToken);
   else if (result.reason !== 'network') tokens.clear();
-  return screenAfterRefresh(result);
+  return result;
+}
+
+/** DTL-AUT-037: 재진입할 때 부른다. */
+export async function restoreSession(api: SessionApi, tokens: AccessTokenHolder): Promise<RestoreOutcome> {
+  return screenAfterRefresh(await refreshAndStore(api, tokens));
 }
