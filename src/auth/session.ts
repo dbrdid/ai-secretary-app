@@ -24,7 +24,7 @@
  * - [임시 가정] 네트워크 오류로 복원하지 못하면 로그아웃시키지 않고 '다시 시도'로 둔다. 잠깐 끊겼다고 로그인 화면으로
  *   보내면 로그인 유지를 고른 사람도 다시 로그인해야 한다. 원문에 없다(OD-07).
  * - 복원 뒤 갈 곳은 온보딩을 마쳤으면 홈, 아니면 초기 설정이다. DTL-AUT-037 원문은 '홈'만 적었지만 로그인(DTL-AUT-032)과
- *   같은 규칙을 써야 초기 설정을 건너뛰지 않는다(REQ-SET-003).
+ *   같은 규칙을 써야 초기 설정을 건너뛰지 않는다(REQ-SET-009).
  */
 
 /** DTL-AUT-035 원문 값. [합의 필요] 로그인 때부터 세는지, 재발급할 때마다 다시 세는지는 원문에 없다(OD-07). */
@@ -109,8 +109,11 @@ export function screenAfterRefresh(result: RefreshResult): RestoreOutcome {
   }
 }
 
-/** DTL-AUT-037: 재진입할 때 부른다. 성공하면 Access 토큰을 보관함에 넣고, 세션이 없거나 끝났으면 비운다. */
-export async function restoreSession(api: SessionApi, tokens: AccessTokenHolder): Promise<RestoreOutcome> {
+/**
+ * 재발급을 받고 보관함을 고친다. 성공하면 Access 토큰을 넣고, 세션이 없거나 끝났으면 비운다. 네트워크 오류면 그대로 둔다.
+ * 재진입 복원(restoreSession)과 401 자동 갱신(auth/tokenRefresh.ts)이 같은 규칙을 쓰게 여기 하나만 둔다.
+ */
+export async function refreshAndStore(api: SessionApi, tokens: AccessTokenHolder): Promise<RefreshResult> {
   let result: RefreshResult;
   try {
     result = await api.refresh();
@@ -120,5 +123,10 @@ export async function restoreSession(api: SessionApi, tokens: AccessTokenHolder)
   }
   if (result.ok) tokens.set(result.accessToken);
   else if (result.reason !== 'network') tokens.clear();
-  return screenAfterRefresh(result);
+  return result;
+}
+
+/** DTL-AUT-037: 재진입할 때 부른다. */
+export async function restoreSession(api: SessionApi, tokens: AccessTokenHolder): Promise<RestoreOutcome> {
+  return screenAfterRefresh(await refreshAndStore(api, tokens));
 }

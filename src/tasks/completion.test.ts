@@ -41,7 +41,7 @@ describe('DTL-TSK-002 할 일 완료', () => {
     assert.equal(done.title, created.title);
   });
 
-  test('[임시 가정 OD-16] 완료한 할 일을 다시 누르면 완료가 풀린다', async () => {
+  test('REQ-TSK-005 완료한 할 일을 다시 누르면 완료가 풀린다', async () => {
     const { created, toggle } = await setup();
     const done = value(await toggle(created)) as TaskItem;
     const undone = value(await toggle(done)) as TaskItem;
