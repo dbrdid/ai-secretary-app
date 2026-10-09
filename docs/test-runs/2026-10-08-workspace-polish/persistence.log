@@ -1,0 +1,48 @@
+PASS A UI save -> B new-tab restore (11 fields and review state)
+PASS A -> B clean automatic sync (11 fields/status/savedAt/review)
+PASS B -> A clean automatic sync
+PASS A -> B: stale-tab warning and overwrite protection
+PASS A -> B: dirty fields and review preserved (no automatic merge)
+PASS A -> B: confirm cancel preserves fields/review/lock
+PASS A -> B: confirm accept loads latest and resets review
+PASS A -> B: reload reflects saved changes
+PASS B -> A: stale-tab warning and overwrite protection
+PASS B -> A: dirty fields and review preserved (no automatic merge)
+PASS B -> A: confirm cancel preserves fields/review/lock
+PASS B -> A: confirm accept loads latest and resets review
+PASS B -> A: reload reflects saved changes
+PASS Review-only local change protected
+PASS Review-only explicit load resets checkbox
+PASS Other keys/sessionStorage/null storageArea ignored
+PASS Delayed payload ignored in favor of current raw; no storage write
+PASS delete: existing input preserved and saving blocked
+PASS delete: clean tab recovers valid snapshot
+PASS clear: existing input preserved and saving blocked
+PASS clear: clean tab recovers valid snapshot
+PASS corrupt: existing input preserved and saving blocked
+PASS corrupt: clean tab recovers valid snapshot
+PASS invalid-schema: existing input preserved and saving blocked
+PASS invalid-schema: clean tab recovers valid snapshot
+PASS read-error: existing input preserved and saving blocked
+PASS read-error: clean tab recovers valid snapshot
+PASS All storage receive paths are write-free
+PASS delete: dirty input/review survive error and valid recovery with lock
+PASS delete: dirty recovery cancel preserves state
+PASS delete: dirty recovery accept restores saved state
+PASS clear: dirty input/review survive error and valid recovery with lock
+PASS clear: dirty recovery cancel preserves state
+PASS clear: dirty recovery accept restores saved state
+PASS corrupt: dirty input/review survive error and valid recovery with lock
+PASS corrupt: dirty recovery cancel preserves state
+PASS corrupt: dirty recovery accept restores saved state
+PASS read-error: dirty input/review survive error and valid recovery with lock
+PASS read-error: dirty recovery cancel preserves state
+PASS read-error: dirty recovery accept restores saved state
+PASS Valid draft status and null savedAt reflected
+PASS Pre-save raw guard blocks delayed-event overwrite
+PASS Late older payload cannot roll back current UI
+PASS First Chrome normal exit verified before relaunch
+PASS Same profile/origin full Chrome restart restores saved fields and review state
+PASS Unsaved edits and review checkbox discarded; previous confirmed save preserved
+PASS All three isolated Chrome PIDs normally exited and absent
+{"result":"/Users/shiomiikuhiro/Projects/ai-secretary-app/docs/test-runs/2026-10-08T05-01-55.518Z-browser-persistence/result.json","resultSha256":"4ef3443f45146ee83f6b12533ea53d84007ee1322be07f246f6993ae29cd91e1","exitCode":0,"profile":"/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-qMJq1l","origin":"http://127.0.0.1:59031"}

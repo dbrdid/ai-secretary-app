@@ -1,0 +1,21 @@
+PASS Initial unsaved guidance and reduced-motion preference
+PASS All editable controls labeled; save guidance associated and live
+PASS Real Tab / Enter skip-link -> form -> first field and visible focus
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'' !== 's2'
+
+    at file:///Users/shiomiikuhiro/Projects/ai-secretary-app/scripts/verify-browser-ui.mjs:92:10 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '',
+  expected: 's2',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.16.0

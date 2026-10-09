@@ -7,3 +7,6 @@ sources/
 
 # 사용자 캡처. 비공개 팀 시트 화면이 담겨 있어 저장소에 올리지 않는다.
 attachments/
+
+# Python 캐시
+__pycache__/

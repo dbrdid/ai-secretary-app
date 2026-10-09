@@ -1,0 +1,136 @@
+{
+  "startedAtFolder": "/Users/shiomiikuhiro/Projects/ai-secretary-app/docs/test-runs/2026-10-08T00-45-34.620Z-23681",
+  "finishedAt": "2026-10-08T00:46:05.076Z",
+  "scope": "웹 회귀·합성 AI 검증. STT·실제 웹 AI 연결·시각 품질·다중 탭은 검증하지 않음.",
+  "results": [
+    {
+      "id": "core",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 961
+    },
+    {
+      "id": "web",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 240
+    },
+    {
+      "id": "contracts",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 82
+    },
+    {
+      "id": "browser",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 1658
+    },
+    {
+      "id": "ai-two-stage",
+      "status": "failed",
+      "exitCode": 1,
+      "signal": null,
+      "elapsedMs": 27512,
+      "cases": [
+        {
+          "id": "explicit",
+          "pass": true,
+          "failedChecks": []
+        },
+        {
+          "id": "missing",
+          "pass": false,
+          "failedChecks": [
+            "schemaValid",
+            "titleSupportedByContentEvidence",
+            "assignee",
+            "evidenceContainsExpected"
+          ]
+        },
+        {
+          "id": "reversal",
+          "pass": false,
+          "failedChecks": [
+            "count",
+            "assignee",
+            "due"
+          ]
+        },
+        {
+          "id": "other_assignee",
+          "pass": false,
+          "failedChecks": [
+            "schemaValid",
+            "titleSupportedByContentEvidence",
+            "evidenceContainsExpected",
+            "assigneeInAssignmentEvidence"
+          ]
+        },
+        {
+          "id": "observation_only",
+          "pass": false,
+          "failedChecks": [
+            "presence",
+            "count",
+            "titleMeaning",
+            "titleSupportedByContentEvidence",
+            "assignee",
+            "due",
+            "evidenceContainsExpected"
+          ]
+        },
+        {
+          "id": "negated_self",
+          "pass": true,
+          "failedChecks": []
+        },
+        {
+          "id": "no_task",
+          "pass": true,
+          "failedChecks": []
+        },
+        {
+          "id": "pure_refusal",
+          "pass": true,
+          "failedChecks": []
+        },
+        {
+          "id": "required_after_refusal",
+          "pass": false,
+          "failedChecks": [
+            "presence",
+            "count",
+            "titleMeaning",
+            "titleSupportedByContentEvidence",
+            "assignee",
+            "due",
+            "evidenceContainsExpected"
+          ]
+        },
+        {
+          "id": "cancelled_task",
+          "pass": true,
+          "failedChecks": []
+        }
+      ],
+      "complete": true
+    },
+    {
+      "id": "stt",
+      "status": "not_run",
+      "reason": "음성·정답 전사·로컬 STT 실행기 준비 후 실측 필요. 환경 검사는 품질 통과가 아님."
+    }
+  ],
+  "counts": {
+    "passed": 4,
+    "failed": 1,
+    "error": 0,
+    "not_run": 1
+  }
+}

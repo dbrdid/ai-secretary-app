@@ -8,9 +8,12 @@
     "node": ">=22.18"
   },
   "scripts": {
+    "dev": "node scripts/serve-web.mjs",
+    "test:web": "node --test web/*.test.mjs",
     "test": "node --test \"src/**/*.test.ts\"",
     "typecheck": "tsc -p tsconfig.json",
-    "check": "npm run typecheck && npm test"
+    "check": "npm run typecheck && npm test",
+    "test:helper": "node scripts/test-helper.mjs"
   },
   "devDependencies": {
     "@types/node": "^24.19.0",

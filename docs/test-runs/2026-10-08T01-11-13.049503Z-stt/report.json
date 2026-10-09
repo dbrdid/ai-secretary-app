@@ -1,0 +1,45 @@
+{
+  "scope": "macOS Yuna synthetic Korean; not real meeting quality",
+  "model": "small",
+  "device": "cpu",
+  "computeType": "int8",
+  "normalization": "NFC; Unicode letters/numbers only; no number-word equivalence",
+  "versions": {
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.2",
+    "av": "19.0.1"
+  },
+  "complete": true,
+  "results": [
+    {
+      "id": "assignment",
+      "status": "error",
+      "error": "open() got an unexpected keyword argument 'metadata_errors'"
+    },
+    {
+      "id": "negation",
+      "status": "error",
+      "error": "open() got an unexpected keyword argument 'metadata_errors'"
+    },
+    {
+      "id": "reversal",
+      "status": "error",
+      "error": "open() got an unexpected keyword argument 'metadata_errors'"
+    },
+    {
+      "id": "necessity",
+      "status": "error",
+      "error": "open() got an unexpected keyword argument 'metadata_errors'"
+    },
+    {
+      "id": "silence",
+      "status": "error",
+      "error": "open() got an unexpected keyword argument 'metadata_errors'"
+    }
+  ],
+  "counts": {
+    "passed": 0,
+    "failed": 0,
+    "error": 5
+  }
+}

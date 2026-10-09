@@ -1,0 +1,12 @@
+explicit: failed 38041ms
+missing: failed 32924ms
+reversal: failed 67285ms
+other_assignee: passed 44400ms
+observation_only: failed 8594ms
+negated_self: failed 8745ms
+no_task: passed 4245ms
+pure_refusal: failed 8596ms
+required_after_refusal: passed 10598ms
+cancelled_task: failed 10562ms
+multi_independent: error 79453ms
+/Users/shiomiikuhiro/Projects/ai-secretary-app/docs/test-runs/2026-10-08T02-18-41.478Z-ai-classified-HH9VYx/ai-classified.json

@@ -1,0 +1,235 @@
+{
+  "startedAtFolder": "/Users/shiomiikuhiro/Projects/ai-secretary-app/docs/test-runs/2026-10-08T01-42-02.732Z-70291",
+  "finishedAt": "2026-10-08T01:42:21.904Z",
+  "scope": "웹 회귀·선택적 합성 AI/STT 검증. 실제 회의·발화 경계 정확도·웹 AI 연결·시각 품질·다중 탭은 검증하지 않음.",
+  "results": [
+    {
+      "id": "core",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 989
+    },
+    {
+      "id": "web",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 247
+    },
+    {
+      "id": "contracts",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 89
+    },
+    {
+      "id": "browser",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 1539
+    },
+    {
+      "id": "stt-metrics",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 130
+    },
+    {
+      "id": "stt",
+      "status": "failed",
+      "exitCode": 1,
+      "signal": null,
+      "elapsedMs": 16175,
+      "complete": true,
+      "cases": [
+        {
+          "id": "assignment",
+          "status": "failed",
+          "reference": "준호가 보고서를 작성합니다. 기한은 십월 십이일입니다.",
+          "actual": " 중호가 보고서를 작성합니다. 기아는 10월 12일입니다.",
+          "segments": [
+            {
+              "start": 0,
+              "end": 2.2600000000000002,
+              "text": " 중호가 보고서를 작성합니다."
+            },
+            {
+              "start": 2.2600000000000002,
+              "end": 3.9,
+              "text": " 기아는 10월 12일입니다."
+            }
+          ],
+          "metrics": {
+            "cer": 0.30434782608695654,
+            "characterErrors": 7,
+            "referenceCharacters": 23,
+            "keywords": {
+              "준호": false,
+              "십월": false,
+              "십이일": false
+            }
+          },
+          "checks": {
+            "cer": false,
+            "keywords": false,
+            "timestampBounds": true
+          },
+          "durationSeconds": 4.152375,
+          "elapsedSeconds": 2.200819624995347,
+          "realTimeFactor": 0.5300146602836562,
+          "sha256": "e82891fd89d402a0a728cb20a932c22949bf8fd9d1d8b893df23525615ac8ff5",
+          "audioPath": "sources/stt-validation/assignment.wav",
+          "generation": "macOS say Yuna rate=170",
+          "boundaryAccuracy": "not_measured: no manually annotated speech boundaries"
+        },
+        {
+          "id": "negation",
+          "status": "passed",
+          "reference": "저는 발표 자료를 맡지 않겠습니다.",
+          "actual": " 저는 발표 자료를 맞지 않겠습니다.",
+          "segments": [
+            {
+              "start": 0,
+              "end": 2.4,
+              "text": " 저는 발표 자료를 맞지 않겠습니다."
+            }
+          ],
+          "metrics": {
+            "cer": 0.07142857142857142,
+            "characterErrors": 1,
+            "referenceCharacters": 14,
+            "keywords": {
+              "않겠습니다": true
+            }
+          },
+          "checks": {
+            "cer": true,
+            "keywords": true,
+            "timestampBounds": true
+          },
+          "durationSeconds": 2.6228125,
+          "elapsedSeconds": 1.9929133750119945,
+          "realTimeFactor": 0.7598382938208486,
+          "sha256": "3c665f62a00ba516a3a293dc84f4c08f98ba5837812e710053dabdc45f6fd6c9",
+          "audioPath": "sources/stt-validation/negation.wav",
+          "generation": "macOS say Yuna rate=170",
+          "boundaryAccuracy": "not_measured: no manually annotated speech boundaries"
+        },
+        {
+          "id": "reversal",
+          "status": "passed",
+          "reference": "민수가 아니라 지수가 회의록을 작성합니다.",
+          "actual": " 민수가 아니라 지수가 회의록을 작성합니다.",
+          "segments": [
+            {
+              "start": 0,
+              "end": 3,
+              "text": " 민수가 아니라 지수가 회의록을 작성합니다."
+            }
+          ],
+          "metrics": {
+            "cer": 0,
+            "characterErrors": 0,
+            "referenceCharacters": 18,
+            "keywords": {
+              "민수": true,
+              "아니라": true,
+              "지수": true
+            }
+          },
+          "checks": {
+            "cer": true,
+            "keywords": true,
+            "timestampBounds": true
+          },
+          "durationSeconds": 3.2715625,
+          "elapsedSeconds": 2.0566982080054004,
+          "realTimeFactor": 0.6286593051501845,
+          "sha256": "0c3c95e429d453d54a01d532579ced98dbff9289e66377566fea5836e4f4c7e6",
+          "audioPath": "sources/stt-validation/reversal.wav",
+          "generation": "macOS say Yuna rate=170",
+          "boundaryAccuracy": "not_measured: no manually annotated speech boundaries"
+        },
+        {
+          "id": "necessity",
+          "status": "passed",
+          "reference": "테스트 계획을 정리해야 합니다. 담당자와 기한은 아직 정하지 않았습니다.",
+          "actual": " 테스트 계획을 정리해야 합니다. 담당자와 기아는 아직 정하지 않았습니다.",
+          "segments": [
+            {
+              "start": 0,
+              "end": 2.32,
+              "text": " 테스트 계획을 정리해야 합니다."
+            },
+            {
+              "start": 2.32,
+              "end": 5.0600000000000005,
+              "text": " 담당자와 기아는 아직 정하지 않았습니다."
+            }
+          ],
+          "metrics": {
+            "cer": 0.06666666666666667,
+            "characterErrors": 2,
+            "referenceCharacters": 30,
+            "keywords": {
+              "정하지": true,
+              "않았습니다": true
+            }
+          },
+          "checks": {
+            "cer": true,
+            "keywords": true,
+            "timestampBounds": true
+          },
+          "durationSeconds": 5.2884375,
+          "elapsedSeconds": 2.251697542000329,
+          "realTimeFactor": 0.42577747056674664,
+          "sha256": "d80a0a9ddb5b53df0ac5b9d034ed287f0596161d10b65aca110bcef657bef84d",
+          "audioPath": "sources/stt-validation/necessity.wav",
+          "generation": "macOS say Yuna rate=170",
+          "boundaryAccuracy": "not_measured: no manually annotated speech boundaries"
+        },
+        {
+          "id": "silence",
+          "status": "passed",
+          "reference": "",
+          "actual": "",
+          "segments": [],
+          "metrics": {
+            "cer": null,
+            "characterErrors": 0,
+            "referenceCharacters": 0,
+            "keywords": {}
+          },
+          "checks": {
+            "cer": true,
+            "keywords": true,
+            "timestampBounds": true
+          },
+          "durationSeconds": 3,
+          "elapsedSeconds": 1.853699916988262,
+          "realTimeFactor": 0.6178999723294206,
+          "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+          "audioPath": "sources/stt-validation/silence.wav",
+          "generation": "digital silence",
+          "boundaryAccuracy": "not_measured: no manually annotated speech boundaries"
+        }
+      ]
+    },
+    {
+      "id": "ai-two-stage",
+      "status": "not_run",
+      "reason": "--ai 선택 시 로컬 합성 입력 검증"
+    }
+  ],
+  "counts": {
+    "passed": 5,
+    "failed": 1,
+    "error": 0,
+    "not_run": 1
+  }
+}

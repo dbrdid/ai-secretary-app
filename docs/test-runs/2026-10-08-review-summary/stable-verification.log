@@ -1,0 +1,6 @@
+web/model.mjs: OK
+web/model.test.mjs: OK
+package.json: OK
+scripts/verify-browser-persistence.mjs: OK
+scripts/verify-browser-ui.mjs: OK
+scripts/verify-browser.mjs: OK

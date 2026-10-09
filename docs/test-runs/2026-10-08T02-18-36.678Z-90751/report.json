@@ -1,0 +1,60 @@
+{
+  "startedAtFolder": "/Users/shiomiikuhiro/Projects/ai-secretary-app/docs/test-runs/2026-10-08T02-18-36.678Z-90751",
+  "finishedAt": "2026-10-08T02:23:55.001Z",
+  "scope": "웹 회귀·선택적 합성 AI/STT 검증. 실제 회의·발화 경계 정확도·웹 AI 연결·시각 품질·다중 탭은 검증하지 않음.",
+  "results": [
+    {
+      "id": "core",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 1827
+    },
+    {
+      "id": "web",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 340
+    },
+    {
+      "id": "contracts",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 140
+    },
+    {
+      "id": "browser",
+      "status": "passed",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 2453
+    },
+    {
+      "id": "ai-classified",
+      "status": "error",
+      "exitCode": 1,
+      "signal": null,
+      "error": "TIMEOUT: stopped without retry",
+      "elapsedMs": 313556,
+      "complete": false
+    },
+    {
+      "id": "ai-two-stage",
+      "status": "not_run",
+      "reason": "--ai 선택 시 로컬 합성 입력 검증"
+    },
+    {
+      "id": "stt",
+      "status": "not_run",
+      "reason": "--stt 선택 시 로컬 합성 음성 검증. 실제 회의 품질 검증은 별도."
+    }
+  ],
+  "counts": {
+    "passed": 4,
+    "failed": 0,
+    "error": 1,
+    "not_run": 2
+  }
+}
