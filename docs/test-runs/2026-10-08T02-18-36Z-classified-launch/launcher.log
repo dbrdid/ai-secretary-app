@@ -1,0 +1,10 @@
+
+> ai-secretary-app@0.1.0 test:helper
+> node scripts/test-helper.mjs --ai-classified
+
+core: passed
+web: passed
+contracts: passed
+browser: passed
+ai-classified: error
+/Users/shiomiikuhiro/Projects/ai-secretary-app/docs/test-runs/2026-10-08T02-18-36.678Z-90751

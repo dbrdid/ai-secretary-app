@@ -1,0 +1,9 @@
+multi_independent: passed 43949ms
+multi_selective_reassignment: failed 77710ms
+multi_selective_cancellation: failed 73865ms
+refusal_plus_other_necessity: passed 70759ms
+same_utterance_two_tasks: passed 50435ms
+same_utterance_refusal_necessity: failed 9077ms
+new_necessity_phrase: failed 8651ms
+same_title_different_targets: passed 17921ms
+/Users/shiomiikuhiro/Projects/ai-secretary-app/docs/test-runs/2026-10-08T02-26-01.003Z-ai-classified-8h1djJ/ai-classified.json

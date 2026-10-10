@@ -1,0 +1,26 @@
+PASS Initial counts are candidates, not completed tasks
+PASS Explicit non-completion disclaimer
+PASS Whitespace and missing fields count once per task from unsaved input
+PASS Empty title fallback and no implicit save
+PASS Filled fields still require content review
+PASS User title rendered as text, never markup
+PASS Keyboard shortcut focuses task-0-title
+PASS Keyboard shortcut focuses task-1-title
+PASS Keyboard shortcut focuses reviewed
+PASS Review is explicitly not saved
+PASS Saved state matches source of truth
+PASS Reload restores summary from saved values
+PASS Summary does not alter serialized storage contract
+PASS Clean tab summary follows real storage event
+PASS Blocked dirty tab summarizes its retained input, not external data
+PASS Explicit latest restore refreshes counts
+PASS Save failure cannot show saved success
+PASS Retry recovers consistent state
+PASS All empty titles keep candidate total and flag both
+PASS Corrupt storage block overrides summary success
+{
+  "out": "/Users/shiomiikuhiro/Projects/ai-secretary-app/docs/test-runs/2026-10-08T14-30-20.198Z-review-summary",
+  "complete": true,
+  "passed": 20,
+  "defects": []
+}

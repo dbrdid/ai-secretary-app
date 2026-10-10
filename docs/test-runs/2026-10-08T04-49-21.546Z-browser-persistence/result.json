@@ -1,0 +1,2060 @@
+{
+  "startedAt": "2026-10-08T04:49:21.547Z",
+  "complete": true,
+  "checks": [
+    {
+      "name": "A UI save -> B new-tab restore (11 fields and review state)",
+      "passed": true,
+      "evidence": {
+        "initial": {
+          "fields": {
+            "title": "persistence-A title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.173Z\",\"title\":\"persistence-A title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "restoredB": {
+          "fields": {
+            "title": "persistence-A title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.173Z\",\"title\":\"persistence-A title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "A -> B clean automatic sync (11 fields/status/savedAt/review)",
+      "passed": true,
+      "evidence": {
+        "saved": {
+          "fields": {
+            "title": "auto A",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "B",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.358Z\",\"title\":\"auto A\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"B\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "received": {
+          "fields": {
+            "title": "auto A",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "B",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.358Z\",\"title\":\"auto A\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"B\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "B -> A clean automatic sync",
+      "passed": true,
+      "evidence": {
+        "saved": {
+          "fields": {
+            "title": "auto B",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.364Z\",\"title\":\"auto B\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "received": {
+          "fields": {
+            "title": "auto B",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.364Z\",\"title\":\"auto B\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "A -> B: stale-tab warning and overwrite protection",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "fields": {
+            "title": "auto B",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.364Z\",\"title\":\"auto B\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "beforeAttempt": {
+          "fields": {
+            "title": "auto B",
+            "summary": "A -> B stale unsaved summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "afterAttempt": {
+          "fields": {
+            "title": "auto B",
+            "summary": "A -> B stale unsaved summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "writerAfter": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "A -> B: dirty fields and review preserved (no automatic merge)",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "fields": {
+            "title": "auto B",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.364Z\",\"title\":\"auto B\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "beforeAttempt": {
+          "fields": {
+            "title": "auto B",
+            "summary": "A -> B stale unsaved summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "A -> B: confirm cancel preserves fields/review/lock",
+      "passed": true,
+      "evidence": {
+        "cancelled": {
+          "fields": {
+            "title": "auto B",
+            "summary": "A -> B stale unsaved summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "A -> B: confirm accept loads latest and resets review",
+      "passed": true,
+      "evidence": {
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "loaded": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "A -> B: reload reflects saved changes",
+      "passed": true,
+      "evidence": {
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "restored": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "B -> A: stale-tab warning and overwrite protection",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "beforeAttempt": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "B -> A stale unsaved summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "afterAttempt": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "B -> A stale unsaved summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "writerAfter": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "B -> A: dirty fields and review preserved (no automatic merge)",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.373Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"auto discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "beforeAttempt": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "B -> A stale unsaved summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "B -> A: confirm cancel preserves fields/review/lock",
+      "passed": true,
+      "evidence": {
+        "cancelled": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "B -> A stale unsaved summary",
+            "discussion": "auto discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "B -> A: confirm accept loads latest and resets review",
+      "passed": true,
+      "evidence": {
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "loaded": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "B -> A: reload reflects saved changes",
+      "passed": true,
+      "evidence": {
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "restored": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "Review-only local change protected",
+      "passed": true,
+      "evidence": {
+        "reviewed": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": false,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.547Z\",\"title\":\"A latest title\",\"summary\":\"auto summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "held": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "auto summary",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "Review-only explicit load resets checkbox",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "Other keys/sessionStorage/null storageArea ignored",
+      "passed": true,
+      "evidence": {
+        "afterIgnored": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "Delayed payload ignored in favor of current raw; no storage write",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "delete: existing input preserved and saving blocked",
+      "passed": true,
+      "evidence": {
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장본이 삭제되었거나 비어 있습니다. 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": null
+        }
+      }
+    },
+    {
+      "name": "delete: clean tab recovers valid snapshot",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "clear: existing input preserved and saving blocked",
+      "passed": true,
+      "evidence": {
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장본이 삭제되었거나 비어 있습니다. 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": null
+        }
+      }
+    },
+    {
+      "name": "clear: clean tab recovers valid snapshot",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "corrupt: existing input preserved and saving blocked",
+      "passed": true,
+      "evidence": {
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "저장소를 읽지 못했습니다. 저장을 차단했습니다. 저장된 데이터를 읽을 수 없습니다. 기존 데이터는 그대로 보존했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{bad"
+        }
+      }
+    },
+    {
+      "name": "corrupt: clean tab recovers valid snapshot",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "invalid-schema: existing input preserved and saving blocked",
+      "passed": true,
+      "evidence": {
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "저장소를 읽지 못했습니다. 저장을 차단했습니다. 저장된 데이터 형식이 맞지 않습니다. 기존 데이터는 그대로 보존했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{}"
+        }
+      }
+    },
+    {
+      "name": "invalid-schema: clean tab recovers valid snapshot",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "read-error: existing input preserved and saving blocked",
+      "passed": true,
+      "evidence": {
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "저장소를 읽지 못했습니다. 저장을 차단했습니다. injected read failure 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "read-error: clean tab recovers valid snapshot",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "All storage receive paths are write-free",
+      "passed": true,
+      "evidence": {
+        "writes": 0
+      }
+    },
+    {
+      "name": "delete: dirty input/review survive error and valid recovery with lock",
+      "passed": true,
+      "evidence": {
+        "local": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through delete",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": false,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "수정한 내용은 아직 저장되지 않았습니다. 근거를 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through delete",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장본이 삭제되었거나 비어 있습니다. 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": null
+        },
+        "recovered": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through delete",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "delete: dirty recovery cancel preserves state",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "protected through delete",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": true,
+        "disabled": true,
+        "state": "수정됨 · 재검토 필요",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "delete: dirty recovery accept restores saved state",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "clear: dirty input/review survive error and valid recovery with lock",
+      "passed": true,
+      "evidence": {
+        "local": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through clear",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": false,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "수정한 내용은 아직 저장되지 않았습니다. 근거를 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through clear",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장본이 삭제되었거나 비어 있습니다. 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": null
+        },
+        "recovered": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through clear",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "clear: dirty recovery cancel preserves state",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "protected through clear",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": true,
+        "disabled": true,
+        "state": "수정됨 · 재검토 필요",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "clear: dirty recovery accept restores saved state",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "corrupt: dirty input/review survive error and valid recovery with lock",
+      "passed": true,
+      "evidence": {
+        "local": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through corrupt",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": false,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "수정한 내용은 아직 저장되지 않았습니다. 근거를 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through corrupt",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "저장소를 읽지 못했습니다. 저장을 차단했습니다. 저장된 데이터를 읽을 수 없습니다. 기존 데이터는 그대로 보존했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{bad"
+        },
+        "recovered": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through corrupt",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "corrupt: dirty recovery cancel preserves state",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "protected through corrupt",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": true,
+        "disabled": true,
+        "state": "수정됨 · 재검토 필요",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "corrupt: dirty recovery accept restores saved state",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "read-error: dirty input/review survive error and valid recovery with lock",
+      "passed": true,
+      "evidence": {
+        "local": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through read-error",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": false,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "수정한 내용은 아직 저장되지 않았습니다. 근거를 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "broken": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through read-error",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "저장소를 읽지 못했습니다. 저장을 차단했습니다. injected dirty read failure 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "recovered": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "protected through read-error",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "read-error: dirty recovery cancel preserves state",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "protected through read-error",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": true,
+        "disabled": true,
+        "state": "수정됨 · 재검토 필요",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "다른 탭에서 저장소가 변경되었습니다. 미저장 변경 보호를 위해 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "read-error: dirty recovery accept restores saved state",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "A latest title",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+        "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:49:22.704Z\",\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "Valid draft status and null savedAt reflected",
+      "passed": true,
+      "evidence": {
+        "draftState": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "검토 대기",
+          "savedAt": "아직 저장하지 않았습니다.",
+          "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"draft\",\"savedAt\":null,\"title\":\"A latest title\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "Pre-save raw guard blocks delayed-event overwrite",
+      "passed": true,
+      "evidence": {
+        "attempted": {
+          "fields": {
+            "title": "stale delayed overwrite",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:49:22 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 오래된 저장을 차단했습니다. 입력과 검토 상태는 유지됩니다. 최신본 불러오기로 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T10:11:12.000Z\",\"title\":\"delayed event latest\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "Late older payload cannot roll back current UI",
+      "passed": true,
+      "evidence": {
+        "fields": {
+          "title": "delayed event latest",
+          "summary": "review-only remote change",
+          "discussion": "B latest discussion",
+          "decisions": "auto decision",
+          "unresolved": "auto unresolved",
+          "task-0-title": "auto task 0",
+          "task-0-assignee": "A",
+          "task-0-due": "2026-10-14",
+          "task-1-title": "auto task 1",
+          "task-1-assignee": "C",
+          "task-1-due": "2026-10-15"
+        },
+        "reviewed": false,
+        "disabled": true,
+        "state": "사용자 확정 · 예시",
+        "savedAt": "마지막 저장: 2026. 10. 8. 오후 7:11:12 (서울)",
+        "message": "최신 저장본을 불러왔습니다. 원문을 다시 검토해 주세요.",
+        "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T10:11:12.000Z\",\"title\":\"delayed event latest\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+      }
+    },
+    {
+      "name": "First Chrome normal exit verified before relaunch",
+      "passed": true,
+      "evidence": {
+        "pid": 4884,
+        "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+        "origin": "http://127.0.0.1:57488",
+        "args": [
+          "--headless=new",
+          "--no-first-run",
+          "--no-default-browser-check",
+          "--disable-background-networking",
+          "--disable-sync",
+          "--remote-debugging-address=127.0.0.1",
+          "--remote-debugging-port=0",
+          "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+          "about:blank"
+        ],
+        "exited": true,
+        "closeRequestedAt": "2026-10-08T04:49:23.003Z",
+        "closeReply": "acknowledged",
+        "exitCode": 0,
+        "signal": null,
+        "pidAbsent": true
+      }
+    },
+    {
+      "name": "Same profile/origin full Chrome restart restores saved fields and review state",
+      "passed": true,
+      "evidence": {
+        "expected": {
+          "fields": {
+            "title": "delayed event latest",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 7:11:12 (서울)",
+          "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T10:11:12.000Z\",\"title\":\"delayed event latest\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "afterRestart": {
+          "fields": {
+            "title": "delayed event latest",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 7:11:12 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T10:11:12.000Z\",\"title\":\"delayed event latest\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "Unsaved edits and review checkbox discarded; previous confirmed save preserved",
+      "passed": true,
+      "evidence": {
+        "beforeClose": {
+          "fields": {
+            "title": "UNSAVED MUST NOT SURVIVE",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "UNSAVED TASK",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": true,
+          "disabled": false,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 7:11:12 (서울)",
+          "message": "수정한 내용은 아직 저장되지 않았습니다. 근거를 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T10:11:12.000Z\",\"title\":\"delayed event latest\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        },
+        "restored": {
+          "fields": {
+            "title": "delayed event latest",
+            "summary": "review-only remote change",
+            "discussion": "B latest discussion",
+            "decisions": "auto decision",
+            "unresolved": "auto unresolved",
+            "task-0-title": "auto task 0",
+            "task-0-assignee": "A",
+            "task-0-due": "2026-10-14",
+            "task-1-title": "auto task 1",
+            "task-1-assignee": "C",
+            "task-1-due": "2026-10-15"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 7:11:12 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T10:11:12.000Z\",\"title\":\"delayed event latest\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "All three isolated Chrome PIDs normally exited and absent",
+      "passed": true,
+      "evidence": [
+        {
+          "pid": 4884,
+          "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+          "origin": "http://127.0.0.1:57488",
+          "args": [
+            "--headless=new",
+            "--no-first-run",
+            "--no-default-browser-check",
+            "--disable-background-networking",
+            "--disable-sync",
+            "--remote-debugging-address=127.0.0.1",
+            "--remote-debugging-port=0",
+            "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+            "about:blank"
+          ],
+          "exited": true,
+          "closeRequestedAt": "2026-10-08T04:49:23.003Z",
+          "closeReply": "acknowledged",
+          "exitCode": 0,
+          "signal": null,
+          "pidAbsent": true
+        },
+        {
+          "pid": 4902,
+          "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+          "origin": "http://127.0.0.1:57488",
+          "args": [
+            "--headless=new",
+            "--no-first-run",
+            "--no-default-browser-check",
+            "--disable-background-networking",
+            "--disable-sync",
+            "--remote-debugging-address=127.0.0.1",
+            "--remote-debugging-port=0",
+            "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+            "about:blank"
+          ],
+          "exited": true,
+          "closeRequestedAt": "2026-10-08T04:49:23.831Z",
+          "closeReply": "acknowledged",
+          "exitCode": 0,
+          "signal": null,
+          "pidAbsent": true
+        },
+        {
+          "pid": 4971,
+          "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+          "origin": "http://127.0.0.1:57488",
+          "args": [
+            "--headless=new",
+            "--no-first-run",
+            "--no-default-browser-check",
+            "--disable-background-networking",
+            "--disable-sync",
+            "--remote-debugging-address=127.0.0.1",
+            "--remote-debugging-port=0",
+            "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+            "about:blank"
+          ],
+          "exited": true,
+          "closeRequestedAt": "2026-10-08T04:49:24.562Z",
+          "closeReply": "acknowledged",
+          "exitCode": 0,
+          "signal": null,
+          "pidAbsent": true
+        }
+      ]
+    }
+  ],
+  "defects": [],
+  "launches": [
+    {
+      "pid": 4884,
+      "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+      "origin": "http://127.0.0.1:57488",
+      "args": [
+        "--headless=new",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=0",
+        "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+        "about:blank"
+      ],
+      "exited": true,
+      "closeRequestedAt": "2026-10-08T04:49:23.003Z",
+      "closeReply": "acknowledged",
+      "exitCode": 0,
+      "signal": null,
+      "pidAbsent": true
+    },
+    {
+      "pid": 4902,
+      "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+      "origin": "http://127.0.0.1:57488",
+      "args": [
+        "--headless=new",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=0",
+        "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+        "about:blank"
+      ],
+      "exited": true,
+      "closeRequestedAt": "2026-10-08T04:49:23.831Z",
+      "closeReply": "acknowledged",
+      "exitCode": 0,
+      "signal": null,
+      "pidAbsent": true
+    },
+    {
+      "pid": 4971,
+      "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+      "origin": "http://127.0.0.1:57488",
+      "args": [
+        "--headless=new",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=0",
+        "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+        "about:blank"
+      ],
+      "exited": true,
+      "closeRequestedAt": "2026-10-08T04:49:24.562Z",
+      "closeReply": "acknowledged",
+      "exitCode": 0,
+      "signal": null,
+      "pidAbsent": true
+    }
+  ],
+  "assets4173": [
+    {
+      "url": "/",
+      "status": 200,
+      "localSha256": "17d49cd9c32675b2b4793a7d755632017603766c1e35dd97b3768464076a0283",
+      "servedSha256": "17d49cd9c32675b2b4793a7d755632017603766c1e35dd97b3768464076a0283",
+      "equal": true
+    },
+    {
+      "url": "/app.mjs",
+      "status": 200,
+      "localSha256": "7e50a174e45028ae9f34fc044dae0c7c8b76dc5bf718d3d4c854f5a74703b020",
+      "servedSha256": "7e50a174e45028ae9f34fc044dae0c7c8b76dc5bf718d3d4c854f5a74703b020",
+      "equal": true
+    },
+    {
+      "url": "/model.mjs",
+      "status": 200,
+      "localSha256": "34fb6eff4ccb6f583408470ae2cb15b1a142773120a53e80d9bb9458ea28b1d8",
+      "servedSha256": "34fb6eff4ccb6f583408470ae2cb15b1a142773120a53e80d9bb9458ea28b1d8",
+      "equal": true
+    },
+    {
+      "url": "/style.css",
+      "status": 200,
+      "localSha256": "8ecb438f7043034544ef4c2dbf836efe5f6d1fa8909052dd66e58b98df51ae82",
+      "servedSha256": "8ecb438f7043034544ef4c2dbf836efe5f6d1fa8909052dd66e58b98df51ae82",
+      "equal": true
+    }
+  ],
+  "scope": "Headless Chrome; normal Browser.close only. No force termination, OS restart, visual review or simultaneous-write race proof.",
+  "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-gPIlYH",
+  "scriptSha256": "241a755ad9be6fe7aa94a1f5759510aae70e3cc518a274ee2a74d2e291e643e9",
+  "origin": "http://127.0.0.1:57488",
+  "dialogs": [
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    },
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    }
+  ],
+  "savedBaseline": {
+    "fields": {
+      "title": "delayed event latest",
+      "summary": "review-only remote change",
+      "discussion": "B latest discussion",
+      "decisions": "auto decision",
+      "unresolved": "auto unresolved",
+      "task-0-title": "auto task 0",
+      "task-0-assignee": "A",
+      "task-0-due": "2026-10-14",
+      "task-1-title": "auto task 1",
+      "task-1-assignee": "C",
+      "task-1-due": "2026-10-15"
+    },
+    "reviewed": false,
+    "disabled": true,
+    "state": "사용자 확정 · 예시",
+    "savedAt": "마지막 저장: 2026. 10. 8. 오후 7:11:12 (서울)",
+    "message": "다른 탭의 최신 저장본을 자동 반영했습니다. 원문을 다시 검토해 주세요.",
+    "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T10:11:12.000Z\",\"title\":\"delayed event latest\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+  },
+  "unsavedBeforeClose": {
+    "fields": {
+      "title": "UNSAVED MUST NOT SURVIVE",
+      "summary": "review-only remote change",
+      "discussion": "B latest discussion",
+      "decisions": "auto decision",
+      "unresolved": "auto unresolved",
+      "task-0-title": "UNSAVED TASK",
+      "task-0-assignee": "A",
+      "task-0-due": "2026-10-14",
+      "task-1-title": "auto task 1",
+      "task-1-assignee": "C",
+      "task-1-due": "2026-10-15"
+    },
+    "reviewed": true,
+    "disabled": false,
+    "state": "수정됨 · 재검토 필요",
+    "savedAt": "마지막 저장: 2026. 10. 8. 오후 7:11:12 (서울)",
+    "message": "수정한 내용은 아직 저장되지 않았습니다. 근거를 다시 확인해 주세요.",
+    "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T10:11:12.000Z\",\"title\":\"delayed event latest\",\"summary\":\"review-only remote change\",\"discussion\":\"B latest discussion\",\"decisions\":\"auto decision\",\"unresolved\":\"auto unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"auto task 0\",\"assignee\":\"A\",\"due\":\"2026-10-14\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"auto task 1\",\"assignee\":\"C\",\"due\":\"2026-10-15\",\"evidenceId\":\"s3\"}]}"
+  },
+  "finishedAt": "2026-10-08T04:49:24.664Z",
+  "exitCode": 0
+}

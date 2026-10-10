@@ -1,0 +1,53 @@
+{
+  "passed": 13,
+  "checks": [
+    "Initial unsaved guidance and reduced-motion preference",
+    "All editable controls labeled; save guidance associated and live",
+    "Real Tab / Enter skip-link -> form -> first field and visible focus",
+    "Keyboard evidence activation moves focus to transcript",
+    "No horizontal overflow or clipped controls at 1440px",
+    "No horizontal overflow or clipped controls at 1024px",
+    "No horizontal overflow or clipped controls at 768px",
+    "No horizontal overflow or clipped controls at 600px",
+    "No horizontal overflow or clipped controls at 390px",
+    "No horizontal overflow or clipped controls at 320px",
+    "Dirty -> reviewed but unsaved -> saved guidance and review reset",
+    "Failed save is not reported saved; retry recovers",
+    "Storage block overrides saved badge and disables save"
+  ],
+  "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-ui-oMyBSc",
+  "origin": "http://127.0.0.1:54902",
+  "layouts": [
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "controls": []
+    },
+    {
+      "width": 1024,
+      "scroll": 1024,
+      "controls": []
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "controls": []
+    },
+    {
+      "width": 600,
+      "scroll": 600,
+      "controls": []
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "controls": []
+    },
+    {
+      "width": 320,
+      "scroll": 320,
+      "controls": []
+    }
+  ],
+  "scope": "Isolated headless Chrome; screenshots and DOM geometry, keyboard subset. Not screen-reader or real mobile certification."
+}

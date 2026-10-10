@@ -101,6 +101,15 @@
   - 앱이면 '미체크'는 앱을 완전히 닫을 때 끝나는지.
 - 지금 코드: `src/auth/session.ts`, 가짜 서버 `src/adapters/fake/fakeSessionServer.ts`.
 
+### OD-25 세션별 갱신 요청 공유와 수명주기
+- 2026-10-08 사용자 지정 범위로 `src/auth/sessionRefresh.ts`의 single-flight wrapper만 구현. 팀 승인이나 실제 서버 계약 확정은 아니다.
+- 세션/브라우저 컨텍스트 내 wrapper 하나를 생성하여 `restoreSession(wrapper, tokens)` 및 향후 refresh 호출에 공유한다. 진행 중 Promise만 공유하고 성공·실패 완료 전에 해제한다. 영구 결과 캐시·모듈 전역 캐시는 없다. 다른 wrapper는 같은 원본 API를 받아도 독립적이다.
+- 동기 throw와 reject는 오류 내용을 기록/반환하지 않고 기존 network 결과로 정규화한다. 네 가지 실패 결과는 그대로 공유하며 이후 호출은 새 요청이다.
+- 한계: 이 wrapper만으로 이전 응답이 새 로그인 세션에 기록되는 것을 방지하지 못한다. 로그인/로그아웃 경계에서 별도 token holder 및 wrapper로 교체하고 소비자가 이전 세션 결과를 무시해야 한다. disposal/취소 확장은 별도 세션 수명주기 작업으로 남긴다.
+- 기존 restoreSession의 자동 교체, 외부 서버·쿠키 변경·401 자동 재전송·라우팅·다중 탭·로그아웃 구현은 이번 범위 밖이다.
+- 사용자 인계에 따르면 Gemini 일반 설계 리뷰 완료(single-flight, 동기 throw, 실패 후 해제, 순차 호출, 격리 검사 권장). 이번 작업에서 리뷰를 다시 실행하거나 팀 합의로 간주하지 않는다.
+- 남은 논의: wrapper와 token holder의 소유 주체, 세션 경계와 오래된 소비자 결과 무시 방식, 실제 서버 회전/폐기 정책.
+
 ### OD-08 비밀번호 재설정 방식
 - 스토리보드: 한 화면에서 이메일 [Verify](코드) → 새 비밀번호·확인 → [Set Password] → 로그인 화면.
 - 상세 설계: [재설정 링크 받기] → 1시간·1회용 링크 메일(DTL-AUT-047) → 새 비밀번호 화면(DTL-AUT-050). 가입 여부와 관계없이 같은 안내(DTL-AUT-048), 바꾼 뒤 모든 기기 로그아웃(DTL-AUT-053).

@@ -1,0 +1,22 @@
+PASS 실제 Chrome에서 초기 렌더링·예시 표시·검토 전 저장 잠금
+PASS 근거 클릭 후 원문 강조·초점 이동
+PASS 키보드 Space 검토 체크
+PASS 편집 후 검토 해제·저장 잠금
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'' !== '브라우저 검증 수정본'
+
+    at file:///Users/shiomiikuhiro/Projects/ai-secretary-app/scripts/verify-browser.mjs:86:10 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '',
+  expected: '브라우저 검증 수정본',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.16.0

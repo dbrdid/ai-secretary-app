@@ -1,0 +1,13 @@
+8c3966c1d8831c1a03e68e841cb6f56bded73735f6dbe65afb4045edd8afca79  web/index.html
+f9a825fb6dffebbf4985da767feb544e6d7083f3e8236a6f835a3bbafa8d2c99  web/style.css
+bc3b63fab0eba4c8374de807a285dbbae30f07de423cb0e96fd1beab15d114eb  web/app.mjs
+9e61cb740fd23582881a30e9bf7a21fc7c6ae4be27e1134c2ddccfbbea61523e  scripts/verify-browser-ui.mjs
+4ef3443f45146ee83f6b12533ea53d84007ee1322be07f246f6993ae29cd91e1  docs/test-runs/2026-10-08T05-01-55.518Z-browser-persistence/result.json
+c04999e6ea3cd0b27b6da0a261a268e4e4bbf9c1fac030b9dbaeab40051e378c  docs/test-runs/2026-10-08T05-01-59.172Z-workspace-ui/result.json
+2b40363bbc5274464fe8285cd00d054724ca0f10cc8ab212a4da8b07b7b88ae5  docs/test-runs/2026-10-08T05-01-59.172Z-workspace-ui/1440-full.png
+507b5c8dbd3933b5260d185e302096d228dfe4969fe81f1f23209242ca95e8b9  docs/test-runs/2026-10-08T05-01-59.172Z-workspace-ui/390-full.png
+6851bc48d6aedebc34bd389b8668645685d321503e01706da455943e22bc4d19  docs/test-runs/2026-10-08-workspace-polish/check.log
+cfcf29a57fab3d48744933782ee54178c3d29ad236c485a7859a239b8f9e470b  docs/test-runs/2026-10-08-workspace-polish/web.log
+22f9720495d672344f1b7e3fc8925ed9c3c49627ecb7fe3b7bf9a402a1765a93  docs/test-runs/2026-10-08-workspace-polish/browser.log
+2a9ab5db3db5fe25064f08e6f67a5fb38fabb472122193ed04d59d5ac579f8b1  docs/test-runs/2026-10-08-workspace-polish/persistence.log
+7ab391e625871a0799ee55c34a36f2556729bf384d054c04dc92466909376359  docs/test-runs/2026-10-08-workspace-polish/ui-final.log

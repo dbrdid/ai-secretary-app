@@ -1,0 +1,23 @@
+PASS 실제 Chrome에서 초기 렌더링·예시 표시·검토 전 저장 잠금
+PASS 근거 클릭 후 원문 강조·초점 이동
+PASS 키보드 Space 검토 체크
+PASS 편집 후 검토 해제·저장 잠금
+PASS 실제 localStorage 저장·새로고침 복원·미지정 담당자/기한 유지
+PASS 반복 저장 시 저장 키 중복 없음
+PASS 주입한 저장 예외: 오류 안내·입력 유지·이전 저장본 보존
+PASS 손상 저장본 읽기 실패·덮어쓰기 잠금
+{
+  "passed": 8,
+  "checks": [
+    "실제 Chrome에서 초기 렌더링·예시 표시·검토 전 저장 잠금",
+    "근거 클릭 후 원문 강조·초점 이동",
+    "키보드 Space 검토 체크",
+    "편집 후 검토 해제·저장 잠금",
+    "실제 localStorage 저장·새로고침 복원·미지정 담당자/기한 유지",
+    "반복 저장 시 저장 키 중복 없음",
+    "주입한 저장 예외: 오류 안내·입력 유지·이전 저장본 보존",
+    "손상 저장본 읽기 실패·덮어쓰기 잠금"
+  ],
+  "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-browser-hw2ECB",
+  "scope": "Headless Chrome DOM·키보드 일부 검증. 시각 품질·전체 Tab 순서·실제 용량 소진·다중 탭은 별도 검증."
+}

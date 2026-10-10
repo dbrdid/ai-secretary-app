@@ -1,0 +1,265 @@
+{
+  "startedAt": "2026-10-08T14:30:20.199Z",
+  "complete": true,
+  "checks": [
+    {
+      "name": "Initial counts are candidates, not completed tasks",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "1건",
+          "1건",
+          "1건"
+        ],
+        "state": "검토 대기 — 아직 저장 전입니다. 원문과 초안을 검토하고 확인란을 선택하면 저장할 수 있습니다.",
+        "expected": "검토 대기 — 아직 저장 전입니다. 원문과 초안을 검토하고 확인란을 선택하면 저장할 수 있습니다.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: 저장 후 다시 열기 검증담당자·기한 미입력 · 확인 필요"
+      }
+    },
+    {
+      "name": "Explicit non-completion disclaimer",
+      "passed": true
+    },
+    {
+      "name": "Whitespace and missing fields count once per task from unsaved input",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "2건",
+          "2건",
+          "2건"
+        ],
+        "state": "수정됨 · 재검토 필요 — 미저장 변경이 있습니다. 원문을 다시 검토하고 확인란을 선택해 주세요.",
+        "expected": "수정됨 · 재검토 필요 — 미저장 변경이 있습니다. 원문을 다시 검토하고 확인란을 선택해 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기담당자·기한 미입력 · 확인 필요업무 2 편집: 제목 미입력제목·담당자·기한 미입력 · 확인 필요"
+      }
+    },
+    {
+      "name": "Empty title fallback and no implicit save",
+      "passed": true
+    },
+    {
+      "name": "Filled fields still require content review",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "0건"
+        ],
+        "state": "수정됨 · 재검토 필요 — 미저장 변경이 있습니다. 원문을 다시 검토하고 확인란을 선택해 주세요.",
+        "expected": "수정됨 · 재검토 필요 — 미저장 변경이 있습니다. 원문을 다시 검토하고 확인란을 선택해 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>빈 항목 없음 · 내용 검토 필요"
+      }
+    },
+    {
+      "name": "User title rendered as text, never markup",
+      "passed": true
+    },
+    {
+      "name": "Keyboard shortcut focuses task-0-title",
+      "passed": true
+    },
+    {
+      "name": "Keyboard shortcut focuses task-1-title",
+      "passed": true
+    },
+    {
+      "name": "Keyboard shortcut focuses reviewed",
+      "passed": true
+    },
+    {
+      "name": "Review is explicitly not saved",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "0건"
+        ],
+        "state": "검토 완료 · 저장 전 — 검토 확인을 마쳤습니다. 확정하고 저장을 눌러야 이 브라우저에 반영됩니다.",
+        "expected": "검토 완료 · 저장 전 — 검토 확인을 마쳤습니다. 확정하고 저장을 눌러야 이 브라우저에 반영됩니다.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>빈 항목 없음 · 내용 검토 필요"
+      }
+    },
+    {
+      "name": "Saved state matches source of truth",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "0건"
+        ],
+        "state": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "expected": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>빈 항목 없음 · 내용 검토 필요"
+      }
+    },
+    {
+      "name": "Reload restores summary from saved values",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "0건"
+        ],
+        "state": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "expected": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>빈 항목 없음 · 내용 검토 필요"
+      }
+    },
+    {
+      "name": "Summary does not alter serialized storage contract",
+      "passed": true
+    },
+    {
+      "name": "Clean tab summary follows real storage event",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "1건",
+          "1건",
+          "1건"
+        ],
+        "state": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "expected": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>담당자·기한 미입력 · 확인 필요"
+      }
+    },
+    {
+      "name": "Blocked dirty tab summarizes its retained input, not external data",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "2건",
+          "1건",
+          "2건"
+        ],
+        "state": "저장 차단 — 저장이 차단되었습니다. 아래 오류 안내를 확인하고 최신본을 불러와 주세요.",
+        "expected": "저장 차단 — 저장이 차단되었습니다. 아래 오류 안내를 확인하고 최신본을 불러와 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기담당자 미입력 · 확인 필요업무 2 편집: <img src=x onerror=alert(1)>담당자·기한 미입력 · 확인 필요"
+      }
+    },
+    {
+      "name": "Explicit latest restore refreshes counts",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "0건"
+        ],
+        "state": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "expected": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>빈 항목 없음 · 내용 검토 필요"
+      }
+    },
+    {
+      "name": "Save failure cannot show saved success",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "0건"
+        ],
+        "state": "저장 실패 · 미저장 — 저장하지 못했습니다. 입력은 유지됩니다. 아래 오류를 확인한 뒤 다시 저장해 주세요.",
+        "expected": "저장 실패 · 미저장 — 저장하지 못했습니다. 입력은 유지됩니다. 아래 오류를 확인한 뒤 다시 저장해 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>빈 항목 없음 · 내용 검토 필요"
+      }
+    },
+    {
+      "name": "Retry recovers consistent state",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "0건"
+        ],
+        "state": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "expected": "사용자 확정 · 예시 — 저장된 확정본입니다. 다시 저장하려면 원문을 검토하고 확인란을 선택해 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>빈 항목 없음 · 내용 검토 필요"
+      }
+    },
+    {
+      "name": "All empty titles keep candidate total and flag both",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "2건"
+        ],
+        "state": "수정됨 · 재검토 필요 — 미저장 변경이 있습니다. 원문을 다시 검토하고 확인란을 선택해 주세요.",
+        "expected": "수정됨 · 재검토 필요 — 미저장 변경이 있습니다. 원문을 다시 검토하고 확인란을 선택해 주세요.",
+        "items": "업무 1 편집: 제목 미입력제목 미입력 · 확인 필요업무 2 편집: 제목 미입력제목 미입력 · 확인 필요"
+      }
+    },
+    {
+      "name": "Corrupt storage block overrides summary success",
+      "passed": true,
+      "evidence": {
+        "counts": [
+          "2건",
+          "0건",
+          "0건",
+          "0건"
+        ],
+        "state": "저장 차단 — 저장이 차단되었습니다. 아래 오류 안내를 확인하고 최신본을 불러와 주세요.",
+        "expected": "저장 차단 — 저장이 차단되었습니다. 아래 오류 안내를 확인하고 최신본을 불러와 주세요.",
+        "items": "업무 1 편집: 검토 화면 초안 만들기빈 항목 없음 · 내용 검토 필요업무 2 편집: <img src=x onerror=alert(1)>빈 항목 없음 · 내용 검토 필요"
+      }
+    }
+  ],
+  "defects": [],
+  "launches": [
+    {
+      "pid": 80875,
+      "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-summary-hi1Cvx",
+      "origin": "http://127.0.0.1:54809",
+      "args": [
+        "--headless=new",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=0",
+        "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-summary-hi1Cvx",
+        "about:blank"
+      ],
+      "exited": true,
+      "closeRequestedAt": "2026-10-08T14:30:22.412Z",
+      "closeReply": "acknowledged",
+      "exitCode": 0,
+      "signal": null,
+      "pidAbsent": true
+    }
+  ],
+  "assets4173": [],
+  "scope": "Headless Chrome; normal Browser.close only. No force termination, OS restart, visual review or simultaneous-write race proof.",
+  "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-summary-hi1Cvx",
+  "scriptSha256": "e705151696d4877cb0ffdab8d711784dab3c9660c304650de8a5009b29001872",
+  "origin": "http://127.0.0.1:54809",
+  "dialogs": [
+    {
+      "type": "confirm",
+      "message": "미저장 입력과 검토 상태를 버리고 최신 저장본을 불러올까요?"
+    }
+  ]
+}

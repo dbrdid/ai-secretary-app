@@ -1,0 +1,734 @@
+{
+  "startedAt": "2026-10-08T04:40:19.249Z",
+  "complete": true,
+  "checks": [
+    {
+      "name": "A UI save -> B new-tab restore (11 fields and review state)",
+      "passed": true,
+      "evidence": {
+        "initial": {
+          "fields": {
+            "title": "persistence-A title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.652Z\",\"title\":\"persistence-A title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "restoredB": {
+          "fields": {
+            "title": "persistence-A title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.652Z\",\"title\":\"persistence-A title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "A -> B: stale-tab warning and overwrite protection",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "fields": {
+            "title": "persistence-A title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.652Z\",\"title\":\"persistence-A title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.851Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "beforeAttempt": {
+          "fields": {
+            "title": "persistence-A title",
+            "summary": "A -> B stale unsaved summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 덮어쓰기를 막았습니다. 현재 수정 내용을 별도로 보관한 뒤 새로고침해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.851Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "afterAttempt": {
+          "fields": {
+            "title": "persistence-A title",
+            "summary": "A -> B stale unsaved summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 덮어쓰기를 막았습니다. 현재 수정 내용을 별도로 보관한 뒤 새로고침해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.851Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "writerAfter": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.851Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "A -> B: automatic other-tab UI synchronization",
+      "passed": false,
+      "evidence": {
+        "field": "title",
+        "expected": "A latest title",
+        "actual": "persistence-A title"
+      }
+    },
+    {
+      "name": "A -> B: reload reflects saved changes",
+      "passed": true,
+      "evidence": {
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.851Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "restored": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.851Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "B -> A: stale-tab warning and overwrite protection",
+      "passed": true,
+      "evidence": {
+        "baseline": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.851Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"persistence-A discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "B latest discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "beforeAttempt": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "B -> A stale unsaved summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 덮어쓰기를 막았습니다. 현재 수정 내용을 별도로 보관한 뒤 새로고침해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "afterAttempt": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "B -> A stale unsaved summary",
+            "discussion": "persistence-A discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": true,
+          "disabled": true,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "다른 탭에서 저장소가 변경되었습니다. 덮어쓰기를 막았습니다. 현재 수정 내용을 별도로 보관한 뒤 새로고침해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "writerAfter": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "B latest discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "B -> A: automatic other-tab UI synchronization",
+      "passed": false,
+      "evidence": {
+        "field": "discussion",
+        "expected": "B latest discussion",
+        "actual": "persistence-A discussion"
+      }
+    },
+    {
+      "name": "B -> A: reload reflects saved changes",
+      "passed": true,
+      "evidence": {
+        "saved": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "B latest discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "확정본을 이 브라우저에 저장했습니다. 새로고침 후 다시 확인할 수 있습니다. 담당자·기한 공란은 확인 필요로 유지됩니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "restored": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "B latest discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "First Chrome normal exit verified before relaunch",
+      "passed": true,
+      "evidence": {
+        "pid": 99135,
+        "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+        "origin": "http://127.0.0.1:56543",
+        "args": [
+          "--headless=new",
+          "--no-first-run",
+          "--no-default-browser-check",
+          "--disable-background-networking",
+          "--disable-sync",
+          "--remote-debugging-address=127.0.0.1",
+          "--remote-debugging-port=0",
+          "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+          "about:blank"
+        ],
+        "exited": true,
+        "closeRequestedAt": "2026-10-08T04:40:21.095Z",
+        "closeReply": "acknowledged",
+        "exitCode": 0,
+        "signal": null,
+        "pidAbsent": true
+      }
+    },
+    {
+      "name": "Same profile/origin full Chrome restart restores saved fields and review state",
+      "passed": true,
+      "evidence": {
+        "expected": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "B latest discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "afterRestart": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "B latest discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "Unsaved edits and review checkbox discarded; previous confirmed save preserved",
+      "passed": true,
+      "evidence": {
+        "beforeClose": {
+          "fields": {
+            "title": "UNSAVED MUST NOT SURVIVE",
+            "summary": "persistence-A summary",
+            "discussion": "B latest discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "UNSAVED TASK",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": true,
+          "disabled": false,
+          "state": "수정됨 · 재검토 필요",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "수정한 내용은 아직 저장되지 않았습니다. 근거를 다시 확인해 주세요.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        },
+        "restored": {
+          "fields": {
+            "title": "A latest title",
+            "summary": "persistence-A summary",
+            "discussion": "B latest discussion",
+            "decisions": "persistence-A decisions",
+            "unresolved": "persistence-A unresolved",
+            "task-0-title": "A task 0",
+            "task-0-assignee": "검증 담당 A",
+            "task-0-due": "2026-10-12",
+            "task-1-title": "A task 1",
+            "task-1-assignee": "검증 담당 B",
+            "task-1-due": "2026-10-13"
+          },
+          "reviewed": false,
+          "disabled": true,
+          "state": "사용자 확정 · 예시",
+          "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+          "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+          "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+        }
+      }
+    },
+    {
+      "name": "All three isolated Chrome PIDs normally exited and absent",
+      "passed": true,
+      "evidence": [
+        {
+          "pid": 99135,
+          "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+          "origin": "http://127.0.0.1:56543",
+          "args": [
+            "--headless=new",
+            "--no-first-run",
+            "--no-default-browser-check",
+            "--disable-background-networking",
+            "--disable-sync",
+            "--remote-debugging-address=127.0.0.1",
+            "--remote-debugging-port=0",
+            "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+            "about:blank"
+          ],
+          "exited": true,
+          "closeRequestedAt": "2026-10-08T04:40:21.095Z",
+          "closeReply": "acknowledged",
+          "exitCode": 0,
+          "signal": null,
+          "pidAbsent": true
+        },
+        {
+          "pid": 99351,
+          "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+          "origin": "http://127.0.0.1:56543",
+          "args": [
+            "--headless=new",
+            "--no-first-run",
+            "--no-default-browser-check",
+            "--disable-background-networking",
+            "--disable-sync",
+            "--remote-debugging-address=127.0.0.1",
+            "--remote-debugging-port=0",
+            "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+            "about:blank"
+          ],
+          "exited": true,
+          "closeRequestedAt": "2026-10-08T04:40:21.830Z",
+          "closeReply": "acknowledged",
+          "exitCode": 0,
+          "signal": null,
+          "pidAbsent": true
+        },
+        {
+          "pid": 99364,
+          "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+          "origin": "http://127.0.0.1:56543",
+          "args": [
+            "--headless=new",
+            "--no-first-run",
+            "--no-default-browser-check",
+            "--disable-background-networking",
+            "--disable-sync",
+            "--remote-debugging-address=127.0.0.1",
+            "--remote-debugging-port=0",
+            "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+            "about:blank"
+          ],
+          "exited": true,
+          "closeRequestedAt": "2026-10-08T04:40:22.465Z",
+          "closeReply": "acknowledged",
+          "exitCode": 0,
+          "signal": null,
+          "pidAbsent": true
+        }
+      ]
+    }
+  ],
+  "defects": [
+    "A -> B: 자동 동기화 없음. 다른 탭 UI는 이전 값이며 새로고침 필요(경고/잠금과 별개).",
+    "B -> A: 자동 동기화 없음. 다른 탭 UI는 이전 값이며 새로고침 필요(경고/잠금과 별개)."
+  ],
+  "launches": [
+    {
+      "pid": 99135,
+      "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+      "origin": "http://127.0.0.1:56543",
+      "args": [
+        "--headless=new",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=0",
+        "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+        "about:blank"
+      ],
+      "exited": true,
+      "closeRequestedAt": "2026-10-08T04:40:21.095Z",
+      "closeReply": "acknowledged",
+      "exitCode": 0,
+      "signal": null,
+      "pidAbsent": true
+    },
+    {
+      "pid": 99351,
+      "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+      "origin": "http://127.0.0.1:56543",
+      "args": [
+        "--headless=new",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=0",
+        "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+        "about:blank"
+      ],
+      "exited": true,
+      "closeRequestedAt": "2026-10-08T04:40:21.830Z",
+      "closeReply": "acknowledged",
+      "exitCode": 0,
+      "signal": null,
+      "pidAbsent": true
+    },
+    {
+      "pid": 99364,
+      "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+      "origin": "http://127.0.0.1:56543",
+      "args": [
+        "--headless=new",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-background-networking",
+        "--disable-sync",
+        "--remote-debugging-address=127.0.0.1",
+        "--remote-debugging-port=0",
+        "--user-data-dir=/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+        "about:blank"
+      ],
+      "exited": true,
+      "closeRequestedAt": "2026-10-08T04:40:22.465Z",
+      "closeReply": "acknowledged",
+      "exitCode": 0,
+      "signal": null,
+      "pidAbsent": true
+    }
+  ],
+  "assets4173": [
+    {
+      "url": "/",
+      "status": 200,
+      "localSha256": "163dbf37680ce033b2225d9d574bce7b275abcbd32d6db64bd9357f8508ac2e0",
+      "servedSha256": "163dbf37680ce033b2225d9d574bce7b275abcbd32d6db64bd9357f8508ac2e0",
+      "equal": true
+    },
+    {
+      "url": "/app.mjs",
+      "status": 200,
+      "localSha256": "2bd35cd6db2a06455b6f49a00357e0aadfc6a3df6320f5fa18259359ec8c6603",
+      "servedSha256": "2bd35cd6db2a06455b6f49a00357e0aadfc6a3df6320f5fa18259359ec8c6603",
+      "equal": true
+    },
+    {
+      "url": "/model.mjs",
+      "status": 200,
+      "localSha256": "34fb6eff4ccb6f583408470ae2cb15b1a142773120a53e80d9bb9458ea28b1d8",
+      "servedSha256": "34fb6eff4ccb6f583408470ae2cb15b1a142773120a53e80d9bb9458ea28b1d8",
+      "equal": true
+    },
+    {
+      "url": "/style.css",
+      "status": 200,
+      "localSha256": "8ecb438f7043034544ef4c2dbf836efe5f6d1fa8909052dd66e58b98df51ae82",
+      "servedSha256": "8ecb438f7043034544ef4c2dbf836efe5f6d1fa8909052dd66e58b98df51ae82",
+      "equal": true
+    }
+  ],
+  "scope": "Headless Chrome; normal Browser.close only. No force termination, OS restart, visual review or simultaneous-write race proof.",
+  "profile": "/var/folders/bh/h8khrbb91vv03tz2t2zny7wr0000gn/T/ai-secretary-persistence-UtiaAa",
+  "scriptSha256": "ea0afa40e889a865e0a1b84315e9dcf1498c0517fd31338ab95c5337037de5a4",
+  "origin": "http://127.0.0.1:56543",
+  "savedBaseline": {
+    "fields": {
+      "title": "A latest title",
+      "summary": "persistence-A summary",
+      "discussion": "B latest discussion",
+      "decisions": "persistence-A decisions",
+      "unresolved": "persistence-A unresolved",
+      "task-0-title": "A task 0",
+      "task-0-assignee": "검증 담당 A",
+      "task-0-due": "2026-10-12",
+      "task-1-title": "A task 1",
+      "task-1-assignee": "검증 담당 B",
+      "task-1-due": "2026-10-13"
+    },
+    "reviewed": false,
+    "disabled": true,
+    "state": "사용자 확정 · 예시",
+    "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+    "message": "이 브라우저에 저장한 확정본을 복원했습니다.",
+    "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+  },
+  "unsavedBeforeClose": {
+    "fields": {
+      "title": "UNSAVED MUST NOT SURVIVE",
+      "summary": "persistence-A summary",
+      "discussion": "B latest discussion",
+      "decisions": "persistence-A decisions",
+      "unresolved": "persistence-A unresolved",
+      "task-0-title": "UNSAVED TASK",
+      "task-0-assignee": "검증 담당 A",
+      "task-0-due": "2026-10-12",
+      "task-1-title": "A task 1",
+      "task-1-assignee": "검증 담당 B",
+      "task-1-due": "2026-10-13"
+    },
+    "reviewed": true,
+    "disabled": false,
+    "state": "수정됨 · 재검토 필요",
+    "savedAt": "마지막 저장: 2026. 10. 8. 오후 1:40:20 (서울)",
+    "message": "수정한 내용은 아직 저장되지 않았습니다. 근거를 다시 확인해 주세요.",
+    "raw": "{\"schemaVersion\":1,\"id\":\"meeting-demo-1\",\"mode\":\"example\",\"status\":\"confirmed\",\"savedAt\":\"2026-10-08T04:40:20.973Z\",\"title\":\"A latest title\",\"summary\":\"persistence-A summary\",\"discussion\":\"B latest discussion\",\"decisions\":\"persistence-A decisions\",\"unresolved\":\"persistence-A unresolved\",\"tasks\":[{\"id\":\"t1\",\"title\":\"A task 0\",\"assignee\":\"검증 담당 A\",\"due\":\"2026-10-12\",\"evidenceId\":\"s2\"},{\"id\":\"t2\",\"title\":\"A task 1\",\"assignee\":\"검증 담당 B\",\"due\":\"2026-10-13\",\"evidenceId\":\"s3\"}]}"
+  },
+  "finishedAt": "2026-10-08T04:40:22.568Z",
+  "exitCode": 1
+}
