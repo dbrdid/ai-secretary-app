@@ -10,11 +10,15 @@
 필요: Node.js 22.18 이상
 
 ```bash
+cd ~/Projects/ai-secretary-app   # 저장소를 받은 폴더로 이동 (package.json 이 있는 곳)
 git fetch origin
 git checkout feature/web-demo-2026-10-08
 npm install
 npm run dev
 ```
+
+- `npm install`은 `package.json`이 있는 폴더에서 실행한다. 홈 폴더(`~`)에서 실행하면 `ENOENT: package.json` 오류가 난다.
+- 폴더 위치가 다르면 `cd` 경로만 자기 저장소 위치로 바꾼다.
 
 브라우저에서 `http://127.0.0.1:4173` 을 연다.
 
